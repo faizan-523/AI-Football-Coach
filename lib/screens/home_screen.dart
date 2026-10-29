@@ -1,6 +1,5 @@
 
 import 'package:flutter/material.dart';
-import 'ai_coach_screen.dart';
 import 'login_screen.dart';
 import 'performance_predictor_screen.dart';
 
@@ -139,79 +138,7 @@ class HomeScreen extends StatelessWidget {
               ),
               const SizedBox(height: 25),
 
-              // AI Coach card
-              Container(
-                width: double.infinity,
-                padding: const EdgeInsets.all(22),
-                decoration: BoxDecoration(
-                  gradient: const LinearGradient(
-                    colors: [
-                      Color(0xFF335C28),
-                      Color(0xFF1D351D),
-                    ],
-                  ),
-                  borderRadius: BorderRadius.circular(22),
-                ),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    const Icon(
-                      Icons.psychology_alt,
-                      size: 42,
-                      color: Color(0xFFB7F34A),
-                    ),
-                    const SizedBox(height: 15),
-                    const Text(
-                      'Meet Your AI Coach',
-                      style: TextStyle(
-                        fontSize: 22,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                    const SizedBox(height: 8),
-                    const Text(
-                      'Ask questions about football skills, drills and training.',
-                      style: TextStyle(
-                        color: Colors.white70,
-                        height: 1.5,
-                      ),
-                    ),
-                    const SizedBox(height: 18),
-                    SizedBox(
-                      width: double.infinity,
-                      child: ElevatedButton.icon(
-                        onPressed: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) =>
-                              const AICoachScreen(),
-                            ),
-                          );
-                        },
-                        icon: const Icon(
-                          Icons.chat_bubble_outline,
-                          color: Color(0xFF101710),
-                        ),
-                        label: const Text(
-                          'Chat with AI Coach',
-                          style: TextStyle(
-                            color: Color(0xFF101710),
-                          ),
-                        ),
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: const Color(0xFFB7F34A),
-                          padding: const EdgeInsets.all(15),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-
-              const SizedBox(height: 20),
-
-              // TensorFlow Lite Performance Predictor card
+              // TensorFlow Lite Performance Predictor
               Container(
                 width: double.infinity,
                 padding: const EdgeInsets.all(22),
